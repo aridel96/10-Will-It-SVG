@@ -4,8 +4,12 @@
 
   ## Description
   Challenge 10 from the University of Minnesota Fullstack Coding Bootcamp. 
-  
-  Project 10 focuses on Object Oriented Program and testing.
+
+  This application prompts the user to select the text, shape, and color for their logo. It then creates a SVG file for the logo using the user input. 
+
+  Project 10 focuses on Object Oriented Programming and testing. This project uses Test Driven Development and Unit Testing to create the tests and code. Through this project I've learned the importance of Test Drive Development and how without TDD, it can be easy to overlook edge cases while programming.
+
+
 
   ## Table of Contents
   - [Installation](#Installation)
@@ -31,6 +35,8 @@
 
   ## Technologies Used
   Node.JS, NPM, Inquirer, and FS File System were used to create this application.
+
+  JEST
 
   ## Contributing 
   No

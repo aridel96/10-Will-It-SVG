@@ -28,28 +28,20 @@ const questions = [{
 
 
 function writeFile(userInput) {
-    const {text, txtColor, shape, shapeColor} = userInput
-
-    if(shape == 'circle') {
-        let myLogo = new Circle(text, txtColor, shape, shapeColor);
-
-        fs.writeFile('circle.svg', myLogo, (err) => {              
+    if(userInput.shape == 'circle') {
+        fs.writeFile('circle.svg', JSON.stringify(userInput), (err) => {              
             err ? console.log(err) : console.log('Generated circle.svg')        
         });
     }
 
-    else if(shape == 'triangle') {
-        let myLogo = new Triangle(text, txtColor, shape, shapeColor);
-
-        fs.writeFile('triangle.svg', myLogo, (err) => {              
+    else if(userInput.shape == 'triangle') {
+        fs.writeFile('triangle.svg', JSON.stringify(userInput), (err) => {              
             err ? console.log(err) : console.log('Generated triangle.svg')        
         });
     }
 
-    else {
-        let myLogo = new Square(text, txtColor, shape, shapeColor);
-
-        fs.writeFile('square.svg', myLogo, (err) => {              
+    else if(userInput.shape == 'square') {
+        fs.writeFile('square.svg', JSON.stringify(userInput), (err) => {              
             err ? console.log(err) : console.log('Generated square.svg')        
         });
     }

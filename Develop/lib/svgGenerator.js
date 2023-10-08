@@ -1,4 +1,5 @@
-// userInput = JSON.parse(userInput)
+const userInput = JSON.parse(userInput)
+const {text, txtColor, shape, shapeColor} = userInput
 
 class Shape {
     constructor(text, txtColor, shapeColor) {
@@ -161,7 +162,7 @@ class Square extends Shape {
 
 class Triangle extends Shape {
     constructor(text, txtColor, shape, shapeColor){
-        
+
         super(text, txtColor, shapeColor);
         this.setShape(shape);
     }
@@ -203,18 +204,23 @@ class Triangle extends Shape {
     }
 }
 
+if (shape == 'triangle') {
+}
+
+switch (shape) {
+    case 'triangle':
+        let triangle = new Triangle(text, txtColor, shape, shapeColor);
+    case 'sqaure':
+        let square = new Square(text, txtColor, shape, shapeColor);
+    case 'circle':
+        let circle = new Circle(text, txtColor, shape, shapeColor);
+}
+
+
+
 module.exports = {
     Shape,
     Circle,
     Square,
     Triangle
 }
-
-
-
-
-
-
-
-
-

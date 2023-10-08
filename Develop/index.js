@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateSVG = require('./lib/svgGenerator');
+const {Shape, Triangle, Circle, Square} = require('./lib/svgGenerator');
 
 const questions = [{
         type: 'input',
@@ -30,21 +30,25 @@ const questions = [{
 function writeFile(userInput) {
     const {text, txtColor, shape, shapeColor} = userInput
 
-    myLogo = generateSVG(text, txtColor, shape, shapeColor);
-
     if(shape == 'circle') {
+        let myLogo = new Circle(text, txtColor, shape, shapeColor);
+
         fs.writeFile('circle.svg', myLogo, (err) => {              
             err ? console.log(err) : console.log('Generated circle.svg')        
         });
     }
 
     else if(shape == 'triangle') {
+        let myLogo = new Triangle(text, txtColor, shape, shapeColor);
+
         fs.writeFile('triangle.svg', myLogo, (err) => {              
             err ? console.log(err) : console.log('Generated triangle.svg')        
         });
     }
 
     else {
+        let myLogo = new Square(text, txtColor, shape, shapeColor);
+
         fs.writeFile('square.svg', myLogo, (err) => {              
             err ? console.log(err) : console.log('Generated square.svg')        
         });

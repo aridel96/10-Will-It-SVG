@@ -1,3 +1,5 @@
+// userInput = JSON.parse(userInput)
+
 class Shape {
     constructor(text, txtColor, shapeColor) {
         this.setText(text);
@@ -159,6 +161,7 @@ class Square extends Shape {
 
 class Triangle extends Shape {
     constructor(text, txtColor, shape, shapeColor){
+        
         super(text, txtColor, shapeColor);
         this.setShape(shape);
     }

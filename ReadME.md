@@ -34,7 +34,7 @@
   Under Construction
 
   ## Technologies Used
-  Node.JS, NPM, Inquirer, and FS File System were used to create this application.
+  Node.JS, NPM, Inquirer, Jest and FS File System were used to create this application.
 
   JEST
 

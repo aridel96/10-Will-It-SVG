@@ -110,7 +110,7 @@ describe('svgGenerator', () => {
             square.setTxtColor('black');
             square.setText('Bee');
 
-            expect(square.render()).toEqual(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><rect x="50" y="50" width="100" height="100" fill='yellow' /><text x="100" y="120" text-anchor="middle" fill='black'>Bee</text></svg>`)
+            expect(square.render()).toEqual(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><rect x="50" y="50" width="100" height="100" fill='yellow' /><text x="100" y="100" text-anchor="middle" fill='black'>Bee</text></svg>`)
         })
     })
 })
@@ -140,7 +140,7 @@ describe('svgGenerator', () => {
             circle.setTxtColor('pink');
             circle.setShapeColor('blue');
 
-            expect(circle.render()).toEqual(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><circle points="100,10 40,198 190,78 10,78 160,198" fill='blue' /><text x="100" y="120" text-anchor="middle" fill='pink'>SAS</text></svg>` )
+            expect(circle.render()).toEqual(`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><circle cx="100" cy="100" r="50" fill='blue' /><text x="100" y="100" text-anchor="middle" fill='pink'>SAS</text></svg>` )
         })
     })
 })

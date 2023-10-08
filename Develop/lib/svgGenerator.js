@@ -1,6 +1,3 @@
-const userInput = JSON.parse(userInput)
-const {text, txtColor, shape, shapeColor} = userInput
-
 class Shape {
     constructor(text, txtColor, shapeColor) {
         this.setText(text);
@@ -113,7 +110,7 @@ class Circle extends Shape {
     }
 
     render() {
-        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><${this.circle} points="100,10 40,198 190,78 10,78 160,198" fill='${this.shapeColor}' /><text x="100" y="120" text-anchor="middle" fill='${this.txtColor}'>${this.text}</text></svg>` 
+        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><${this.circle} cx="100" cy="100" r="50" fill='${this.shapeColor}' /><text x="100" y="100" text-anchor="middle" fill='${this.txtColor}'>${this.text}</text></svg>` 
     }
 }
 
@@ -156,7 +153,7 @@ class Square extends Shape {
     }
     
     render() {
-        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><rect x="50" y="50" width="100" height="100" fill='${this.shapeColor}' /><text x="100" y="120" text-anchor="middle" fill='${this.txtColor}'>${this.text}</text></svg>` 
+        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><rect x="50" y="50" width="100" height="100" fill='${this.shapeColor}' /><text x="100" y="100" text-anchor="middle" fill='${this.txtColor}'>${this.text}</text></svg>` 
     }
 }
 
@@ -202,18 +199,6 @@ class Triangle extends Shape {
     render() {
         return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200"><polygon points="100,20 40,180 160,180" fill='${this.shapeColor}' /><text x="100" y="120" text-anchor="middle" fill='${this.txtColor}'>${this.text}</text></svg>` 
     }
-}
-
-if (shape == 'triangle') {
-}
-
-switch (shape) {
-    case 'triangle':
-        let triangle = new Triangle(text, txtColor, shape, shapeColor);
-    case 'sqaure':
-        let square = new Square(text, txtColor, shape, shapeColor);
-    case 'circle':
-        let circle = new Circle(text, txtColor, shape, shapeColor);
 }
 
 

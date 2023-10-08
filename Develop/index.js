@@ -28,9 +28,9 @@ const questions = [{
 
 
 function writeFile(userInput) {
-    const {text, txtColor, shapeColor} = userInput
+    const {text, txtColor, shape, shapeColor} = userInput
 
-    myLogo = generateSVG(text, txtColor, shapeColor);
+    myLogo = generateSVG(text, txtColor, shape, shapeColor);
 
     if(shape == 'circle') {
         fs.writeFile('circle.svg', myLogo, (err) => {              

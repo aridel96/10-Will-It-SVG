@@ -28,21 +28,42 @@ const questions = [{
 
 
 function writeFile(userInput) {
-    if(userInput.shape == 'circle') {
-        fs.writeFile('circle.svg', JSON.stringify(userInput), (err) => {              
-            err ? console.log(err) : console.log('Generated circle.svg')        
-        });
-    }
+    const {text, txtColor, shape, shapeColor} = userInput;
 
-    else if(userInput.shape == 'triangle') {
-        fs.writeFile('triangle.svg', JSON.stringify(userInput), (err) => {              
+    if(userInput.shape == 'triangle') {
+        const triangle = new Triangle()
+
+        triangle.setText(text);
+        triangle.setTxtColor(txtColor);
+        triangle.setShape(shape)
+        triangle.setShapeColor(shapeColor);
+        
+        fs.writeFile('triangle.svg', triangle.render(), (err) => {              
             err ? console.log(err) : console.log('Generated triangle.svg')        
         });
     }
-
     else if(userInput.shape == 'square') {
-        fs.writeFile('square.svg', JSON.stringify(userInput), (err) => {              
+        const square = new Square()
+
+        square.setText(text);
+        square.setTxtColor(txtColor);
+        square.setShape(shape)
+        square.setShapeColor(shapeColor);
+
+        fs.writeFile('square.svg', square.render(), (err) => {              
             err ? console.log(err) : console.log('Generated square.svg')        
+        });
+    }
+    else if(userInput.shape == 'circle') {
+        const circle = new Circle()
+
+        circle.setText(text);
+        circle.setTxtColor(txtColor);
+        circle.setShape(shape)
+        circle.setShapeColor(shapeColor);
+
+        fs.writeFile('circle.svg', circle.render(), (err) => {              
+            err ? console.log(err) : console.log('Generated circle.svg')        
         });
     }
 }
